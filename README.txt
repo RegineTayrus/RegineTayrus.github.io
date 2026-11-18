@@ -1,33 +1,26 @@
-REGINE PORTFOLIO - IMAGE SETUP
+REGINE PORTFOLIO (REACT)
 
-Create a folder named "images" beside index.html and place these files inside:
+Requirements:
+- Node.js 20.19+ (Node.js 24 is supported)
+- npm
 
-1. regine.png
-   - Use your existing Regine portrait image.
-   - A transparent-background PNG gives the closest result to the reference UI.
+Run locally:
+1. Open a terminal in this project folder.
+2. Run: npm install
+3. Run: npm run dev
+4. Open the local URL printed by Vite (http://127.0.0.1:5173).
 
-2. library.png
-   - Use your existing Screenshot (431).png.
+Build for deployment:
+- Run: npm run build
+- The production site is written to the dist folder.
+- Run: npm run preview to preview the production build locally.
 
-3. score-tracker.png
-   - Use your existing Screenshot (432).png.
+The app uses React Router hash URLs so page navigation works on GitHub Pages
+without requiring server-side route configuration. Portfolio images remain in
+the images folder and are bundled by Vite.
 
-Folder structure:
-
-regine_portfolio/
-|-- index.html
-|-- about.html
-|-- work.html
-|-- contact.html
-|-- style.css
-`-- images/
-    |-- regine.png
-    |-- library.png
-    `-- score-tracker.png
-
-IMPORTANT:
-Do not use paths such as C:\\Users\\ASUS\\Pictures\\... in HTML. Those paths only work on your own computer and will fail on GitHub Pages.
-
-OPTIONAL FOR THE ABOUT PAGE:
-Create a folder named "files" and put your CV there as:
-files/regine-tayrus-cv.pdf
+Deploy to GitHub Pages:
+1. Push changes to the main branch.
+2. In GitHub, open Settings > Pages.
+3. Set the build and deployment source to GitHub Actions.
+4. The workflow in .github/workflows/deploy.yml builds and deploys dist.
